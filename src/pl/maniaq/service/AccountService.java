@@ -15,7 +15,7 @@ public class AccountService {
     }
 
 
-    public void balance(String cardNumber) {
-        System.out.println("Stan konta o numerze " + cardNumber + ": " + 153 + "zł.");
+    public Integer balance(String cardNumber) {
+        return 153;
     }
 }

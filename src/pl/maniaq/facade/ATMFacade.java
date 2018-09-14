@@ -17,11 +17,12 @@ public class ATMFacade {
         accountService.withdraw(cardNumber, amount);
     }
 
-    public void isCardValid(String cardNumber) {
+    public boolean isCardValid(String cardNumber) {
         cardService.isCardCorrect(cardNumber);
+        return true;
     }
 
-    public void getAccountBalance(String cardNumber) {
-        accountService.balance(cardNumber);
+    public Integer getAccountBalance(String cardNumber) {
+        return accountService.balance(cardNumber);
     }
 }
