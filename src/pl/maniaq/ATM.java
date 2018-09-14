@@ -21,6 +21,7 @@ public class ATM {
 
         if (atm.isCardValid(cardNumber)) {
             while (data != 0) {
+                displayMenu();
                 data = scanner.nextInt();
 
                 switch (data) {
@@ -33,6 +34,7 @@ public class ATM {
                         System.out.println("Podaj kwotę jaką wypłacić: ");
                         Integer amount = scanner.nextInt();
                         atm.withdrawMoney(cardNumber, amount);
+                        break;
 
                     case 0:
                         data = 0;
